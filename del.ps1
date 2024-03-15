@@ -1,3 +1,17 @@
+<#
+	.SYNOPSIS
+		Utility for deleting local and not active branches.
+	.DESCRIPTION
+		Deletes not active local branches or specified branches in the ignore file.
+	.PARAMETER repo
+		Specifies the repository directory. If no one is provided, then ".\" is used.
+	.EXAMPLE
+		PS> .\del.ps1
+		Deleting branch mysql_provider
+		Deleting branch local2
+		Done!
+#>
+
 # All script parameters and arguments.
 param (
 	[string]$repo = ".\"
