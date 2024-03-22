@@ -60,7 +60,7 @@ Switch ($LASTEXITCODE)
 # Supressing output by redirecting "standard output" into null.
 ForEach ($branch in $($branches -split "`r`n")) {
 	$branch = $branch.Trim()
-	if ($branch[0] -ne "*" -and ($branch -ne "") -and $branch[0] -ne "*") {
+	if ($branch[0] -ne "*" -and ($branch -ne "")) {
 		Write-Host "Deleting branch $branch"
 		if ($force) {
 			git branch -D $branch 1> $null
